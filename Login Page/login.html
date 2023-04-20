@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="login_style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+	<title>Login Page</title>
+</head>
+<body>
+
+
+	<div class="container">
+
+				<!-- content -->
+
+		<div id="content" class="content">
+			<a><h2>Waroenk <span>Fadillah.</span></h2></a>
+			<h1>Welcome Page</h1>
+			<h4>www.waroenkfadillah.com</h4>
+		</div>
+
+		<div id="register" class="change">
+			<a href="#">
+				<i class="fa-solid fa-arrows-left-right"></i><span class="text-btn">Register</span>
+			</a>
+		</div>
+
+		<div id="register-mobile" class="change-mobile">
+			<a href="#">
+				<i class="fa-solid fa-arrows-left-right"></i><span class="text-btn-mobile">Register</span>
+			</a>
+		</div>
+
+
+
+		<!-- register -->
+
+		<div class="input-register">
+			<h1>Sign <span>In</span></h1>
+
+			<div class="masuk">
+
+				<div class="form">
+					<input class="input-form" type="text" name="name">
+					<label class="label-form">Full Name</label>
+				</div>
+
+				<div class="form">
+					<input class="input-form" type="text" name="name">
+					<label class="label-form">Username</label>
+				</div>
+
+				<div class="form">
+					<input class="input-form" type="email" name="name">
+					<label class="label-form">Email</label>
+				</div>
+
+				<div class="form">
+					<input class="input-form" type="Password" name="name">
+					<label class="label-form">Password</label>
+				</div>
+
+				<div class="form">
+					<input class="input-form" type="Password" name="name">
+					<label class="label-form">Repeat Password</label>
+				</div>
+
+
+
+				<div class="button">
+
+					<div class="btn-submit">
+
+						<a href=""><span>REGISTER</span></a>
+						
+					</div>
+
+<!-- 					<div class="btn-submit">
+						<a  id="google" href="">
+							<i class="fa-brands fa-google"></i>
+							<span>Google</span>
+						</a>
+						
+					</div> -->
+
+				</div>
+	 
+			</div>
+
+		</div>
+		
+
+
+
+		<!-- login -->
+
+		<div id="" class="input form-display-flex ">
+			<h1>Log <span>In</span></h1>
+
+			<div class="masuk">
+
+				<div class="form">
+					<input class="input-form" type="text" name="name">
+					<label class="label-form">Email</label>
+				</div>
+
+				<div class="form">
+					<input class="input-form" type="Password" name="name">
+					<label class="label-form">Password</label>
+				</div>
+
+				<div class="button">
+
+					<div class="btn-submit">
+
+						<a href=""><span>LOGIN</span></a>
+						
+					</div>
+
+					<div class="btn-submit">
+						<a  id="google" href="">
+							<i class="fa-brands fa-google"></i>
+							<span>Google</span>
+						</a>
+						
+					</div>
+
+					<div class="btn-submit">
+						
+						<a id="twitter" href="">
+							<i class="fa-brands fa-twitter"></i>
+							<span>Twitter</span>
+						</a>
+						
+					</div>
+
+				</div>
+	 
+			</div>
+
+		</div>
+
+
+
+
+		<!-- register -->
+
+
+		
+
+
+		
+	</div>
+
+
+<script type="text/javascript">
+		//#FEB44F kuning
+		//#FF6143 orange
+		const change = document.getElementById('login');
+        const content = document.getElementById('content');
+        const register = document.getElementById('register');
+        const registerMobile =	document.getElementById('register-mobile');
+        const loginPindah =	document.getElementById('login-pindah');
+
+        try{
+        	register.addEventListener('click', function() {
+            if (document.querySelector('.text-btn').innerHTML === 'Register'){
+            	document.querySelector('.change').style.background = '#FEB44F'
+            	document.querySelector('.text-btn').innerHTML = 'Login'
+            	document.querySelectorAll('input').forEach((input) => {
+
+            		input.value = '' 
+            	})
+            	document.querySelector('.input-register').style.animation = 'show .5s forwards'
+            	document.querySelector('.input').style.animation = 'dissapear 3s forwards'
+            	
+            }else{
+            	document.querySelector('.change').style.background = '#FF6143'
+            	document.querySelector('.text-btn').innerHTML = 'Register'
+            	document.querySelectorAll('input').forEach((input) => {
+
+            		input.value = ''
+            	})
+            	document.querySelector('.input').style.animation = 'show .5s forwards'
+            	document.querySelector('.input-register').style.animation = 'dissapear 3s forwards'
+
+            }
+            content.classList.toggle('pindah')
+            
+        })
+
+        }catch(error){
+
+        }
+
+        
+        try { 
+        	registerMobile.addEventListener('click', function() {
+
+	        	if (document.querySelector('.text-btn-mobile').innerHTML === 'Register'){
+	        		document.querySelector('.input').style.animation = 'dissapearMobile 3s forwards'
+	        		document.querySelector('.input').style.display = 'none'
+
+	        		document.querySelector('.input-register').style.display = 'flex'
+	        		document.querySelector('.input-register').style.animation = 'showMobile2 1s forwards'
+	        		document.querySelector('.text-btn-mobile').innerHTML = 'Login'
+
+ 					
+        		} else {
+        			document.querySelector('.input-register').style.animation = 'dissapearMobile 2s forwards'
+        			document.querySelector('.input-register').style.display = 'none'
+	        		document.querySelector('.input').style.animation = 'showMobile 1s forwards'
+        			document.querySelector('.input').style.display = 'flex'
+	        		document.querySelector('.text-btn-mobile').innerHTML = 'Register'
+        		}
+        	})
+        }
+         catch(error) {
+
+        }
+
+
+</script>
+</body>
+</html>
